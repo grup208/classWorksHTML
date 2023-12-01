@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        main{
+            background:#292733;
+            display: flex;
+            justify-content: center;
+            gap: 20px;
+            padding:20px 0;
+        }
+        .left-side p{
+            color:white
+        }
+        .left-side h2{
+            color:white
+        }
+        .left-side, .right-side{          
+            width:300px;
+        }
+        input{
+            width:45%;            
+        }
+        button,textarea{
+            width:95%;
+        }
+        button{
+            background: orange;
+        }
+        a{
+            text-decoration: none;
+        }
+        .left-side img{
+            width:15px
+        }
+        .right-side{
+            background: white;
+            padding-left:20px;
+        }
+    </style>
+</head>
+<body>
+    <main>
+        <div class="left-side">
+            <p>Lorem ipsum dolor sit amet consectetur.</p>
+            <h2>Contact Us</h2>
+            <form >
+                <input type="email" name="email" placeholder="Enter your Email">
+                <input type="text" name="name" placeholder="Enter your Name">
+                <input type="addres" name="addres" placeholder="Enter your Addres">
+                <input type="tel" name="phone" placeholder="Enter your Phone">
+                <textarea name="message"  cols="30" rows="10" placeholder="Enter your Message"></textarea>
+                <button type="submit">SUBMIT</button>
+            </form>
+            <div class="icons">
+                <a href="#">
+                    <img src="./facebook.png" alt="facebook icon">
+                </a>
+                <a href="#">
+                    <img src="./facebook.png" alt="facebook icon">
+                </a>
+                <a href="#">
+                    <img src="./facebook.png" alt="facebook icon">
+                </a>                
+            </div>
+        </div>
+        <div class="right-side">
+            <div>
+                <h2> Call Us</h2>
+                <p>999999999999999</p>
+            </div>
+            <div>
+                <h2> location</h2>
+                <p>Lorem ipsum dolor sit.</p>
+            </div>
+            <div>
+                <h2> Bussnes Uours</h2>
+                <p> Lorem ipsum dolor sit amet.</p>
+            </div>
+        </div>
+    </main>
+</body>
+</html>
