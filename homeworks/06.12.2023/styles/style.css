@@ -1,0 +1,50 @@
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body{
+   background-color: rgb(61, 60, 60); 
+}
+.main-container{
+    max-width:1200px;
+    margin: 0 auto;
+}
+header{
+    width:100%;
+    height: 300px;    
+    background-image:url("../images/desktop/image-header.jpg");
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+
+}
+.cards{
+   display: flex; 
+}
+.card{
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+}
+.upper{
+    flex-wrap: wrap; 
+ }
+.upper .card{
+    width:50%;
+    padding:25% 0 ;
+}
+.persons{
+    height:300px;
+    background-color: white;
+}
+
+.lower .card{
+    width:25%;
+    padding:30% 0 ;
+}
+footer{
+    background-color: rgb(160, 199, 160);
+    height:100px;
+}
