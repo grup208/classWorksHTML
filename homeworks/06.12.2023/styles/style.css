@@ -13,17 +13,21 @@ body{
 }
 header{
     width:100%;
-    height: 300px;    
-    background-image:url("../images/desktop/image-header.jpg");
-    background-repeat: no-repeat;
-    background-position: center;
-    background-size: cover;
+    padding: 20% 0;     
+    background-image:url("../images/desktop/image-header.jpg");    
 
+}
+.absolute{   
+    height: 100%;
+    border: 5px solid red;
+    
+    position: absolute;
+    top:0;   
 }
 .cards{
    display: flex; 
 }
-.card{
+.card ,header{
     background-repeat: no-repeat;
     background-position: center;
     background-size: cover;
@@ -34,7 +38,10 @@ header{
 .upper .card{
     width:50%;
     padding:25% 0 ;
+    position: relative;
+  
 }
+
 .persons{
     height:300px;
     background-color: white;
@@ -42,9 +49,10 @@ header{
 
 .lower .card{
     width:25%;
-    padding:30% 0 ;
+    padding:20% 0 ;
 }
 footer{
     background-color: rgb(160, 199, 160);
     height:100px;
+  
 }
