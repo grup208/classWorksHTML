@@ -1,0 +1,97 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    text-decoration: none;
+}
+body{
+    background-color:#fafafa;
+}
+
+
+.main-container{
+    max-width: 1200px;
+    padding: 20px 10px;
+    margin: 0 auto;
+}
+
+header{
+    display: flex;
+    justify-content: space-between;   
+   
+}
+
+header a{
+    font-size: 22px;
+    color: #797979;
+    font-weight: 600;
+}
+header a:hover{
+    color: black;
+}
+
+nav{
+    display: flex;
+    align-items: center;
+}
+nav>*{
+    
+    margin-right: 50px;
+
+}
+.drop-down-parent{
+    display: flex;
+    align-items: center;
+    position: relative;  
+
+}
+.drop-down-parent:hover .drop-down{
+    visibility: visible;
+}
+.drop-down{
+    width:200px;
+    position: absolute;
+    top:40px;
+    left:-20px;
+    display: flex;
+    flex-direction: column;
+    background-color: white;
+    border-radius: 10px;
+    padding: 10px 20px;
+    visibility: hidden;
+    transition-delay: 0.2s ;    
+}
+.drop-down :hover{
+    visibility: visible;
+   
+}
+
+.drop-down-link{
+    display: flex;
+    align-items: center;
+}
+.arrow{
+    width:12px;
+    height: 12px;
+    margin-left: 8px;
+    background-image: url('./images/icon-arrow-down.svg');
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+   
+}
+.main-log{
+    width:100px;
+}
+.auth{
+    display: flex;
+    align-items: center;
+}
+.auth>a{
+    margin-left: 25px;
+}
+.register{
+    border: 3px solid #797979;
+    padding: 8px 20px;
+    border-radius: 15px;
+}
