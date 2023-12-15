@@ -43,10 +43,13 @@ nav>*{
     display: flex;
     align-items: center;
     position: relative;  
-
 }
+
 .drop-down-parent:hover .drop-down{
     visibility: visible;
+}
+.drop-down-parent:hover .arrow{
+    background-image: url('./images/icon-arrow-up.svg')
 }
 .drop-down{
     width:200px;
@@ -63,8 +66,8 @@ nav>*{
 }
 .drop-down :hover{
     visibility: visible;
-   
 }
+   
 
 .drop-down-link{
     display: flex;
@@ -78,6 +81,7 @@ nav>*{
     background-repeat: no-repeat;
     background-position: center;
     background-size: cover;
+    transition-delay: 0.2s ;
    
 }
 .main-log{
