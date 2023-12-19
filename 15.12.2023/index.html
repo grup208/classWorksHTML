@@ -2,58 +2,270 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- displays site properly based on user's device -->
-
-  <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
-  
-  <title>Frontend Mentor | Loopstudios landing page</title>
-
-  <!-- Feel free to remove these styles or customise in your own stylesheet 👍 -->
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <link rel="icon" type="image/x-icon" href="./images/favicon-32x32.png">
+  <link rel="stylesheet" href="./style.css">
   <style>
-    .attribution { font-size: 11px; text-align: center; }
-    .attribution a { color: hsl(228, 45%, 44%); }
-  </style>
+
+/*   
+    body{
+      background-color: rgb(94, 93, 93);
+      font-size:2vw;
+    }
+    header{
+      max-width: 75.5%;
+      height: 34vw;      
+      margin: 0 auto;  
+      position: relative;   
+    }
+    .hero-img-desktop{
+      width: 100%;
+      height: 100%;
+      display: block;
+    }
+    .hero-img-mobile{
+      width: 100%;
+      height: 100%;
+      display: none;
+    }
+    .header-content{
+      position: absolute;
+      top: 0;
+      left: 0;
+      width:100%;
+      height: 100%;      
+    }
+    img.logo{
+      width:10vw;
+    }
+    nav{
+      display: flex;
+      justify-content: space-between;
+      margin: 4.65% 0 0 0;
+     padding: 0 11.5%;
+    }
+    .burger{
+      display: none;
+    }
+    menu{
+      display: flex;
+      align-items: center;
+    }
+    menu a{
+      margin-left: 2.5vw;
+      color: white;
+      font-weight: 500;      
+    }
+    .menu-link::after{
+      width:0%;
+      height: 5px;
+      background-color: blue;
+      content: '';
+      display: block;
+      transition: 0.2s;
+      margin-left: auto;
+    }
+    .menu-link:hover::after{
+      width:100%;
+    }
+   
+    .text-container{
+    width: 33.9vw;
+    font-size: 5vw;
+    color: white;
+    border: 2px solid white;
+    padding: 6px 0 ;
+    margin: 8.8% 0 0 11.5%;
+    text-transform: uppercase;
+    font-size: 4vw;
+    }
+    @media only screen and (max-width: 600px) {
+      body{
+     font-size:4vw;
+    }
+   header{
+      max-width: 100%;
+      height: 100vw;
+      position: relative;
+    }
+      .hero-img-desktop{
+       display: none;
+    }
+      .hero-img-mobile{
+       display: block;
+    }
+    .text-container {
+    width: 60vw;
+    font-size:8vw;
+    margin: 30% 0 0 11.5%;
+    text-transform: uppercase;
+  }
+  img.logo{     
+      width:20vw;     
+    }
+  nav{   
+    align-items: center;
+    margin: 0;
+    padding:  20px;
+    z-index:5;
+  }
+  .logo-link{
+    z-index:5;
+  }
+  .burger{
+      display: inline-block;
+      width:40px;
+      height:30px;      
+      background-image: url('./images/icon-hamburger.svg');
+      background-position: center;
+      background-size: cover;
+      background-repeat: no-repeat;
+      z-index:5;
+  } 
+
+    .burger:hover{
+      background-image: url('./images/icon-close.svg');
+    } 
+    .burger:hover~menu{
+      display: flex;
+    }
+    menu:hover{
+      display: flex;
+    }
+  menu{
+    border:1px solid black;
+      display: none;
+      gap:2vw;
+      flex-direction: column;
+      align-items: flex-start;
+      position: absolute;
+      top:0;
+      bottom: 0;
+      left:0;
+      right:0;
+      padding-top:100px;    
+      z-index:2;
+      background-color: black;     
+    }
+    menu a{
+      font-size: 8vw;
+    }
+     
+
+
+} */
+*{  
+   margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      text-decoration: none;
+    }
+  header{   
+    position: relative;
+  }
+  .hero-img-mobile{
+    width:100%;
+    display: block;
+  }
+  .header-content{   
+    position: absolute;
+    top:0;
+    width:100%;
+    height: 100%;
+    
+  }
+  nav{
+    display: flex;
+    justify-content: space-between;
+    align-items: center; 
+    padding: 15px 10px; 
+  }
+  .logo-link,.burger{
+      z-index: 2;
+    }
+  .burger{
+    width:30px;
+    height: 20px;   
+    background-image: url('./images/icon-hamburger.svg');
+    background-repeat: no-repeat;
+  }
+
+  menu{   
+    display: none;
+    flex-direction: column;
+    gap:15px;
+    position: absolute;
+    background-color: black;
+    top:0;
+    bottom: 0;
+    left:0;
+    right:0;
+    padding-top: 150px;   
+    padding-left: 50px;   
+  }
+  .burger:hover{
+    background-image: url('./images/icon-close.svg');
+  }
+  .burger:hover~menu{
+    display: flex;
+  }
+  menu:hover{
+    display: flex;
+  }
+  menu a{
+    width:fit-content;
+    color:white;
+    font-size: 5vw;
+  }
+  .menu-link::after{
+      width:0%;
+      height: 5px;
+      background-color: blue;
+      content: '';
+      display: block;
+      transition: 0.2s;
+      margin-left: auto;
+    }
+    .menu-link:hover::after{
+      width:100%;
+    }
+
+  .text-container{
+    color: white;
+    border: 2px solid white;
+    width:50%;
+    font-size:8vw;
+    margin-top: 50%;
+    margin-left: 10%;
+  }
+  .active{
+    display: flex;
+  }
+ </style>
 </head>
 <body>
-  About
-  Careers
-  Events
-  Products
-  Support
-
-  Immersive experiences that deliver
-
-  The leader in interactive VR
-
-  Founded in 2011, Loopstudios has been producing world-class virtual reality 
-  projects for some of the best companies around the globe. Our award-winning 
-  creations have transformed businesses through digital experiences that bind 
-  to their brand.
-
-  Our creations
-
-  See all
-
-  Deep earth
-  Night arcade
-  Soccer team VR
-  The grid
-  From up above VR
-  Pocket borealis
-  The curiosity
-  Make it fisheye
-
-  About
-  Careers
-  Events
-  Products
-  Support
-
-  © 2021 Loopstudios. All rights reserved.
-
-  <div class="attribution">
-    Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>. 
-    Coded by <a href="#">Your Name Here</a>.
-  </div>
+  <header>
+    <!-- <img class="hero-img-desktop" src="./images/desktop/image-hero.jpg" alt=""> -->
+    <img class="hero-img-mobile" src="./images/mobile/image-hero.jpg" alt="" >
+    <div class="header-content">
+      <nav>
+        <a class="logo-link" href="">
+          <img class="logo" src="./images/logo.svg" alt="">
+        </a>
+        <span class="burger"></span>
+        <menu >
+          <a class="menu-link" href="">About</a>
+          <a class="menu-link" href="">Careers</a>      
+          <a class="menu-link" href="">Events</a>
+          <a class="menu-link" href="">Products</a>
+          <a class="menu-link"  href="">Support</a>
+        </menu>
+      </nav>
+      <div class="text-container">
+        immersive experiences that deliver
+      </div>
+    </div>
+  </header>  
 </body>
 </html>
