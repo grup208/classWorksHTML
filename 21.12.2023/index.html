@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <!-- <link rel="stylesheet" href="./style.css"> -->
+    <style>
+        main{
+            width:400px;
+            min-height: 300px;
+            margin: 50px auto;
+            /* border: 1px solid red; */
+            padding:10px;            
+        }
+
+        div.item{
+            /* border: 2px solid green; */
+            position: relative;
+            border-bottom: 1px solid;
+        }
+        
+        .icon-container{            
+            width:30px;
+            height: 30px;
+            border-radius: 50%;
+            background-image: url('./assets/images/icon-plus.svg');
+            background-position: center;
+            position: absolute;
+            top:0px;
+            right: 10px;
+        }
+        .icon-container:hover{
+            background-image: url('./assets/images/icon-minus.svg'); 
+        }
+        h4:hover{
+            color:purple;
+        }
+        .item p{           
+           height: 0;
+            overflow:hidden;
+            transition: 1s;
+        }
+        .icon-container:hover~p{
+           height: 100px;
+          
+        }
+    </style>
+</head>
+<body>
+
+    <main>
+        <div class="item">
+            <h4>this is title this is title </h4>
+            <div class="icon-container"></div>
+            <p>
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. Deserunt illo velit eius numquam tempora dolorum, modi veniam eaque harum eligendi. Fuga facilis nulla natus neque ut officiis quasi adipisci at?
+            </p>
+        </div>
+        <div class="item">
+            <h4>this is title this is title </h4>
+            <div class="icon-container"></div>
+            <p>
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. Deserunt illo velit eius numquam tempora dolorum, modi veniam eaque harum eligendi. Fuga facilis nulla natus neque ut officiis quasi adipisci at?
+            </p>
+        </div>
+        <div class="item">
+            <h4>this is title this is title </h4>
+            <div class="icon-container"></div>
+            <p>
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. Deserunt illo velit eius numquam tempora dolorum, modi veniam eaque harum eligendi. Fuga facilis nulla natus neque ut officiis quasi adipisci at?
+            </p>
+        </div>
+        <div class="item">
+            <h4>this is title this is title </h4>
+            <div class="icon-container"></div>
+            <p>
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. Deserunt illo velit eius numquam tempora dolorum, modi veniam eaque harum eligendi. Fuga facilis nulla natus neque ut officiis quasi adipisci at?
+            </p>
+        </div>
+    </main>
+
+    <!-- <h2 class ="custom-font"> this is cusom font</h2>
+    <h2 class ="custom-font-italic"> this is cusom font italic</h2>
+    <h2 > this is default  font</h2>
+    <p>this is p tag</p> -->
+   <!-- <div class="container">
+        <div class="top-section"></div>
+        <div class="bottom-section"></div>
+        <main>
+            <div class="title">
+                <img src="./assets/images/icon-star.svg" alt="">
+                <h1>FAQs</h1>
+            </div>
+            <div class="content">
+                <div>
+                    <h3>What is Frontend Mentor, and how will it help me</h3>
+                    <div class="icon">                       
+                    </div>
+                    <p class="more-text">
+                        Lorem ipsum dolor sit amet consectetur adipisicing elit. Doloremque sit excepturi repudiandae officiis molestias eius est nobis voluptates magni molestiae, autem, repellendus maiores nostrum sapiente accusamus, enim odit illo. Assumenda?
+                    </p>                    
+                </div>
+                <div>
+                    <h3>What is Frontend Mentor, and how will it help me</h3>
+                    <div class="icon">                       
+                    </div>
+                    <p class="more-text">
+                        Lorem ipsum dolor sit amet consectetur adipisicing elit. Doloremque sit excepturi repudiandae officiis molestias eius est nobis voluptates magni molestiae, autem, repellendus maiores nostrum sapiente accusamus, enim odit illo. Assumenda?
+                    </p>                    
+                </div>
+                <div>
+                    <h3>What is Frontend Mentor, and how will it help me</h3>
+                    <div class="icon">                       
+                    </div>
+                    <p class="more-text">
+                        Lorem ipsum dolor sit amet consectetur adipisicing elit. Doloremque sit excepturi repudiandae officiis molestias eius est nobis voluptates magni molestiae, autem, repellendus maiores nostrum sapiente accusamus, enim odit illo. Assumenda?
+                    </p>                    
+                </div>
+                <div>
+                    <h3>What is Frontend Mentor, and how will it help me</h3>
+                    <div class="icon">                       
+                    </div>
+                    <p class="more-text">
+                        Lorem ipsum dolor sit amet consectetur adipisicing elit. Doloremque sit excepturi repudiandae officiis molestias eius est nobis voluptates magni molestiae, autem, repellendus maiores nostrum sapiente accusamus, enim odit illo. Assumenda?
+                    </p>                    
+                </div>
+            </div>
+        </main>
+   </div> -->
+</body>
+</html>

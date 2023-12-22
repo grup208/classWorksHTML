@@ -1,0 +1,82 @@
+/* @font-face {
+    font-family:myFontItalic;
+    src: url('./assets/fonts/WorkSans-Italic-VariableFont_wght.ttf');
+  }
+  @font-face {
+    font-family:myFont;
+    src: url('./assets/fonts/WorkSans-VariableFont_wght.ttf');
+  } */
+  
+/*body{
+    font-family:myFont;    
+  }
+ .container{
+    height:max(100vh, 800px);  
+    position: relative;  
+}
+.top-section{
+    height:30%;
+    background-image: url('./assets/images/background-pattern-desktop.svg');
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+}
+.bottom-section{
+    height:70%;
+    background: #f9eeff;
+}
+main{
+    position: absolute;
+    transform: translateX(-50%);
+    top:20%;
+    left:50%;
+    min-width:max(50%,450px);  
+    padding:5%;
+    border-radius: 10px;   
+    background: white;
+}
+
+.title{
+    display: flex;
+    align-items: canter;
+    gap:20px;
+    margin:20px 0;    
+}
+
+.content>div{   
+    position: relative;
+    border-bottom: 1px solid ;
+    padding-bottom:10px;    
+}
+.content h3{
+    padding:10px 50px 10px 0;
+    line-height: 30px;   
+}
+.content h3:hover{
+    color: blueviolet; 
+}
+.content .icon{
+    width:30px;
+    height:30px;  
+    border-radius: 50%;
+    background-image: url('./assets/images/icon-minus.svg');
+    background-position: center;
+    position: absolute;
+    top:10px;
+    right:10px;
+}
+.content .icon:hover{
+    background-image: url('./assets/images/icon-plus.svg');
+}
+.content .icon:hover~p{
+    height: fit-content;
+}
+.content p{    
+    text-indent: 20px;
+    height: 0;    
+    overflow: hidden;
+    transition-delay: 1s;    
+}
+.content p:hover{
+    height: fit-content;
+} */
