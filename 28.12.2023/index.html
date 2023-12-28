@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        body{
+            background-color:#0d1a2d;
+            padding: 10px;
+        }
+        .card{
+            margin: 30px auto;
+            width:min(100% ,600px);           
+            background-color:#15273f;
+            border-radius: 10px;
+            padding:20px;
+        }
+        .card>*{
+            margin-bottom: 20px;    
+        }
+        .image-container{
+            position: relative;
+            border-radius: 10px; 
+            overflow: hidden;                  
+        }
+        .image-container:hover .ovrley{
+            height: 100%;
+        }
+        .ovrley{
+            position: absolute;
+            top: 0;
+            left:0; 
+            right:0;  
+            height:0;  
+            background-color: rgba(59, 227, 233, 0.466);  
+            overflow: hidden;  
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            transition: 0.5s;
+        }
+        img.main-image{
+            width:100%;
+            display: block;
+        }
+
+        .description{
+            border-bottom: 2px solid gray;         
+        }
+        .description>*{
+            margin-bottom: 20px;            
+        }
+        h2{
+            color:white;
+            text-transform: capitalize;  
+            font-size: 35px;         
+        }
+        h2:hover{
+            color:aqua;
+        }
+        p{
+            color: gray;
+            font-size: 30px;
+        }
+    .time{
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
+    .time>div{
+        display: flex;       
+        align-items: center;
+    }
+    .time img{
+        height:30px;
+        margin-right: 10px;
+    }
+    .color-aqua{
+        color:aqua;
+    }
+    .color-gary{
+        color:gray;
+        font-size: 25px;
+    }
+
+    .person{
+        display: flex;
+        align-items: center;
+    }
+    .person img{
+        width:50px;
+        height:50px;
+        border-radius: 50%;
+        border: 3px solid white;
+        margin-right: 30px;
+    }
+    .person span{
+        font-size: 28px;
+        margin-right: 20px;
+    }
+    .person span:first-of-type {
+        color:gray;
+       
+    }
+    .person span:last-child {
+        color:white;
+      
+    }
+    .person span:last-child:hover{
+        color:aqua;
+      
+    }
+    </style>
+</head>
+
+<body>
+    <div class="card">
+        <div class="image-container">
+            <div class="ovrley">
+                <img src="./images/icon-view.svg" alt="">
+            </div>
+            <img class="main-image" src="./images/image-equilibrium.jpg" alt="">
+        </div>
+        <div class="description">
+            <h2>Equlibrium #3429</h2>
+            <p>
+                Lorem ipsum dolor sit, amet consectetur adipisicing.
+            </p>
+            <div class="time">
+                <div>
+                    <img src="./images/icon-ethereum.svg" alt="">
+                    <span class="color-aqua">0.041 ETH</span>
+                </div>
+                <div>
+                    <img src="./images/icon-clock.svg" alt="">
+                    <span class="color-gary">3 days left</span>
+                </div>
+            </div>            
+        </div>
+        <div class="person">
+            <img src="./images/image-avatar.png" alt="">
+            <span>Creation of</span>
+            <span>Jules Wyvern</span>
+        </div>
+    </div>
+</body>
+
+</html>
