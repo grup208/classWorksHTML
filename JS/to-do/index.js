@@ -1,19 +1,24 @@
 
 const form=document.querySelector('form');
 const tBody=document.querySelector('tbody');
-let userId='';
+let UserId=null;
 renderUsers(getUsers());
 
 form.addEventListener("submit", (e)=>{
    e.preventDefault();
    let formData = new FormData(form);
    const user=Object.fromEntries(formData);
-   user.id=idGenerator();  
+   user.id= UserId ?? idGenerator();  
    saveUser(user);
    renderUsers(getUsers()); 
-   form.reset();   
+   reset();
  });
  
+ function reset(){
+   form.reset(); 
+   UserId=null; 
+ }
+
  function idGenerator(){
    return Math.random().toFixed(4).slice(2);
  }
@@ -22,7 +27,7 @@ form.addEventListener("submit", (e)=>{
 function saveUser(user){
    const users=getUsers();
    let index=users.findIndex((el)=>{return el.id===user.id});
-   index>=0?users[index]=userc : users.push(user);  
+   index>=0?users[index]=user : users.push(user);  
    localStorage.setItem('users',JSON.stringify(users));
 }
 
@@ -34,20 +39,21 @@ function deleteUser(id){
    localStorage.setItem('users',JSON.stringify(users));
    renderUsers(getUsers());
 }
+
 function editUser(id){
    const users=getUsers();
    let index=users.findIndex(el=>el.id===id);
    if(index===-1) return; 
-   userId=user.id;
+   UserId=users[index].id;
    const user=users[index];
    Array.from(form.children).forEach((el)=>{
       let inputName=el.name;
       if(Object.keys(user).includes(inputName)){
          el.value=user[inputName];
       }
-
    });
 }
+
 
 function getUsers(){
    return JSON.parse(localStorage.getItem('users')) ?? [];
@@ -64,9 +70,9 @@ function setDeleteLisener(){
 }
 
 function setEditLisener(){
-   const editBtns=Array.from(document.querySelectorAll('.edit'));
-   editBtns.forEach(el=>{
-      el.addEventListener('click',(e)=>{
+  const editBtns=Array.from(document.querySelectorAll('.edit'));
+  editBtns.forEach(el=>{
+        el.addEventListener('click',(e)=>{         
          const userId=e.target.attributes.userId.value;
          editUser(userId);   
       })
