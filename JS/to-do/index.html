@@ -51,15 +51,15 @@
   <body>
     <main>
       <form name="userForm">
-        <input type="text" placeholder=" first name" name="fName" />
+        <input type="text" placeholder=" first name" name="fName" required/>
 
-        <input type="text" placeholder=" last name" name="lName" />
+        <input type="text" placeholder=" last name" name="lName" required/>
 
-        <input type="email" placeholder=" email" name="email" />
+        <input type="email" placeholder=" email" name="email" required />
 
-        <input type="addres" placeholder=" addres" name="addres" />
+        <input type="addres" placeholder=" addres" name="addres" required/>
 
-        <input type="phone" placeholder=" phone" name="phone" />
+        <input type="phone" placeholder=" phone" name="phone" required minlength="9"/>
 
         <input type="submit" value="submit" />
       </form>

@@ -1,7 +1,7 @@
 
 const form=document.querySelector('form');
 const tBody=document.querySelector('tbody');
-
+let userId='';
 renderUsers(getUsers());
 
 form.addEventListener("submit", (e)=>{
@@ -34,6 +34,20 @@ function deleteUser(id){
    localStorage.setItem('users',JSON.stringify(users));
    renderUsers(getUsers());
 }
+function editUser(id){
+   const users=getUsers();
+   let index=users.findIndex(el=>el.id===id);
+   if(index===-1) return; 
+   userId=user.id;
+   const user=users[index];
+   Array.from(form.children).forEach((el)=>{
+      let inputName=el.name;
+      if(Object.keys(user).includes(inputName)){
+         el.value=user[inputName];
+      }
+
+   });
+}
 
 function getUsers(){
    return JSON.parse(localStorage.getItem('users')) ?? [];
@@ -45,6 +59,16 @@ function setDeleteLisener(){
       el.addEventListener('click',(e)=>{
          const userId=e.target.attributes.userId.value;
          deleteUser(userId);   
+      })
+   })
+}
+
+function setEditLisener(){
+   const editBtns=Array.from(document.querySelectorAll('.edit'));
+   editBtns.forEach(el=>{
+      el.addEventListener('click',(e)=>{
+         const userId=e.target.attributes.userId.value;
+         editUser(userId);   
       })
    })
 }
@@ -62,7 +86,8 @@ function renderUsers(arr){
       <td>${user.addres}</td>
       <td>
         <img
-          id="edit"
+          userId=${user.id}
+          class="edit"
           src="./download (1).png"
           width="30px"
           height="30px"
@@ -76,8 +101,9 @@ function renderUsers(arr){
         />
       </td>
     </tr>      `
-    setDeleteLisener();
    });
+   setDeleteLisener();
+   setEditLisener();
 }
 
 class nameValidator{
