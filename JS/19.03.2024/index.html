@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .reklam.active{
+            width:200px;
+            border: 1px solid red;
+            background-color: aqua;
+            position: absolute;
+            top: 20px;
+        }
+        .reklam button{
+            background-color: red;
+            border: none;
+            position: absolute;
+            right: 0;
+            top: 0;
+            display: none;
+        }
+            
+        .reklam.active button{
+            display: initial;
+        }
+    </style>
+    <script defer src="./main.js"></script>
+
+</head>
+<body>
+    <h1>0</h1>
+    <div class="reklam ">
+        <button class="close-reklam " >X</button>
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Assumenda, harum!
+    </div>
+    <button class="start">start</button>
+    <button class="stop">stop</button>
+
+    
+    
+</body>
+</html>
