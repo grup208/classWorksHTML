@@ -8,6 +8,14 @@ form.addEventListener("submit", (e)=>{
    e.preventDefault();
    let formData = new FormData(form);
    const user=Object.fromEntries(formData);
+   const phone =user.phone;
+   const pattern=/^\+995[0-9]{9}$/;
+   console.log(pattern.test(phone))
+   if (!pattern.test(phone)) {
+      alert('phone format is not correct it must be this format +995XXXXXXXXX');
+      return
+   }
+   
    user.id= UserId ?? idGenerator();  
    saveUser(user);
    renderUsers(getUsers()); 
