@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        table{
+            width:300px;
+        }
+        table,tr,th,td{
+            border-collapse: collapse;
+            border: 1px solid red;
+        }
+        tr.disable{
+            display: none;
+        }
+        .loader{
+            background-color: aliceblue;
+            position: absolute;
+            top: 0;
+            bottom: 0;
+            left: 0;
+            right: 0;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+          }
+        .loader img{
+            width:100px;
+            height: 100px;
+        }
+        .loader.close{
+           display: none; 
+        }
+    </style>
+</head>
+<body>
+    <div class="loader">
+        <img src="./200w.gif" alt="">
+    </div>
+    <h1>26.03.2024</h1>
+   
+    <table>
+        <thead>
+            <tr>
+                <th>valuta</th>
+                <th>buy</th>
+                <th>sell</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td>USD</td>
+                <td>2.65</td>
+                <td>2.69</td>
+            </tr>
+
+        </tbody>
+    </table>
+    <button onclick="showAll()" id="btn">show all</button>
+    <script src="./main.js"></script>
+</body>
+</html>
