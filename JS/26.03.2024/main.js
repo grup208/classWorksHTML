@@ -4,13 +4,14 @@ const loader=document.querySelector('.loader');
 
 getCurrencies();
 
-async function getCurrencies(){
-    const data= await fetch('https://valuto.ge/wp-json/rest-currency-list/v3/currencies');
-    const result=await data.json();
-    renderCurencies(result.data.currencies);
-    loaderClose()
+    async function getCurrencies(){
+        const url='https://valuto.ge/wp-json/rest-currency-list/v3/currencies'
+        const data= await fetch(url);
+        const result=await data.json();
+        renderCurencies(result.data.currencies);
+        loaderClose();
+    }
     
-}
 
 function loaderClose(){
     setTimeout(()=>{
