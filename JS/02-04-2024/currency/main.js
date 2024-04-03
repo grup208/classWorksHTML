@@ -10,11 +10,24 @@ let curencies=null;
 const suportedCodes=await getSupported(); 
 
 HtmlElement.amount_1.addEventListener('input',e=>amount_1=e.target.value);
+
+HtmlElement.select_1.addEventListener('change',async (e)=>{
+    currency1=e.target.value;
+    curencies=await getCurrency(currency1);
+    rate=curencies.rates[currency2];   
+});
+
+HtmlElement.select_2.addEventListener('change',e=>{
+    currency2=e.target.value;
+    rate=curencies.rates[currency2];  
+});
+
 HtmlElement.btn.addEventListener('click',(e)=>{
     e.preventDefault();
     amount_2=rate*amount_1;
     HtmlElement.amount_2.value=amount_2; 
 });
+
 
 async function init(){
     renderOpsions(suportedCodes,currency1,currency2);
@@ -25,11 +38,6 @@ async function init(){
 }
 
 await init();
-// console.log('rate:' ,rate);
-// console.log('currency1: ' ,currency1);
-// console.log('currency2: ',currency2);
-// console.log('amount_1: ',amount_1);
-// console.log('amount_2: ',amount_2);
 
 
 
