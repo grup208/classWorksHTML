@@ -26,13 +26,13 @@ export async function getSupported(){
 }
 
 
-export function renderOpsions(arr){
-    arr.forEach(code => {
+export function renderOpsions(suportedCodeArray,currency1,currency2){
+    suportedCodeArray.forEach(code => {
         HtmlElement.select_1.innerHTML+=`
-        <option ${code[0]=="GEL" ? 'selected':''} value="${code[0]}" title="${code[1]}">${code[0]}</option>
+        <option ${code[0]==currency1 ? 'selected':''} value="${code[0]}" title="${code[1]}">${code[0]}</option>
         `
         HtmlElement.select_2.innerHTML+=`
-        <option value="${code[0]}" title="${code[1]}">${code[0]}</option>
+        <option ${code[0]==currency2 ? 'selected':''} value="${code[0]}" title="${code[1]}">${code[0]}</option>
         `
     });
 }

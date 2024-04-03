@@ -1,35 +1,36 @@
 import {getCurrency,getSupported,renderOpsions} from './service.js'
 import{HtmlElement} from './domElements.js'
 
-let rate=0;
-let code1='';
-let code2='';
+let rate=null;
+let currency1='GEL';
+let currency2='USD';
+let amount_1=1;
+let amount_2=null;
+let curencies=null;
+const suportedCodes=await getSupported(); 
+
+HtmlElement.amount_1.addEventListener('input',e=>amount_1=e.target.value);
+HtmlElement.btn.addEventListener('click',(e)=>{
+    e.preventDefault();
+    amount_2=rate*amount_1;
+    HtmlElement.amount_2.value=amount_2; 
+});
 
 async function init(){
-    const suportedCodes=await getSupported(); 
-    renderOpsions(suportedCodes);
-    const curencies=await getCurrency("GEL");
-    code1=curencies.base_code;
-    code2=HtmlElement.select_2.value; 
-    rate=curencies.rates[code2];
-    console.log(rate)
-    HtmlElement.amount_2.value=rate*1
+    renderOpsions(suportedCodes,currency1,currency2);
+    curencies=await getCurrency(currency1);
+    rate=curencies.rates[currency2];  
+    amount_2=rate*amount_1;
+    HtmlElement.amount_2.value=amount_2;   
 }
 
-function convert(){
+await init();
+// console.log('rate:' ,rate);
+// console.log('currency1: ' ,currency1);
+// console.log('currency2: ',currency2);
+// console.log('amount_1: ',amount_1);
+// console.log('amount_2: ',amount_2);
 
-}
-
-init();
-
-HtmlElement.select_1.addEventListener('change',async (e)=>{
-        const code=e.target.value;
-        const data=await getCurrency(code);
-        code2=HtmlElement.select_2.value;
-        code1=data.base_code;
-        rate=data.rates[code2];
-        // HtmlElement.amount_2.value=rate*HtmlElement.amount_1.value;      
-    });
 
 
 
